@@ -35,7 +35,7 @@ useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       setSticky(scrollY > 500);
-      setOpen(false);
+
       setTransition(scrollY > 700);
     };
 
