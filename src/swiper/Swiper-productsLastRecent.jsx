@@ -73,11 +73,11 @@ const SwiperproductsLastRecent = () => {
        pagination={{
            clickable: true,
          }}
-       //   autoplay={{
-       //     delay: 1000,
+        autoplay={{
+           delay: 1000,
    
-       //     disableOnInteraction: false,
-       //   }}
+            disableOnInteraction: false,
+         }}
           modules={[Pagination, Autoplay,Navigation]}
 
       className="mySwiper bg-black">
