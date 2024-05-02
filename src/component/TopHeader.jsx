@@ -71,7 +71,7 @@ const TopHeader = () => {
           </div>
         </div>
         <button  onClick={() => switchLanguage(i18n.language === 'en' ? 'ar' : 'en')}
-       className="flex-shrink-0 text-gray-500 rounded border border-gray-400 py-2 px-8 focus:outline-none hover:bg-gradient-to-r from-blue-500 to-purple-500 hover:text-white hover:border-transparent  text-lg mt-10 sm:mt-0  transition-all">{i18n.language === 'ar' ? 'to English' : 'تغيير للعربية'}</button>
+       className="flex-shrink-0 text-gray-500 rounded border border-gray-400 py-2 px-8 focus:outline-none hover:bg-gradient-to-r from-blue-500 to-purple-500 hover:text-white hover:border-transparent  text-lg mt-2 sm:mt-0  transition-all">{i18n.language === 'ar' ? 'to English' : 'تغيير للعربية'}</button>
       </div>
     </div>
   );
