@@ -73,7 +73,7 @@ useEffect(() => {
        
         </div>
       </div>
-      <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src={img1}/>
+      <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 md:object-contain object-cover object-center rounded" src={img1}/>
     </div>
   </div>
 </section>
