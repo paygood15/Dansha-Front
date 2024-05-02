@@ -5,7 +5,7 @@ import Nav from "./Nav";
 import CartFaster from "./CartFaster";
 import imglogo from "../assets/Dansha-logo-removebg-preview.png"
 import { getCart } from "../store/CartSlice";
-import { useNavigate } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 import i18n from 'i18next'
 import { useTranslation } from 'react-i18next';
@@ -58,14 +58,15 @@ useEffect(() => {
     >
       <div className="w-full flex justify-between items-center ">
         <div className="logo w-28 h-20   aspect-square">
-          <img
+         <Link to={"/"}>
+         <img
             src={imglogo}
             alt="logo"
             className=" w-full h-full"
-          />
+          /></Link>
           
         </div>
-        <Nav open={open} />
+        <Nav open={open} setOpen={setOpen}/>
 
         <div className=" lg:w-[207px]  justify-end md:w-[207px] sm:w-[204px] max-sm:w-fit flex items-center gap-5">
           <div className=" flex  items-center w-64 max-sm:w-full gap-2">
