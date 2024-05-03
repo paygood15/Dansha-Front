@@ -47,17 +47,17 @@ const Pagination = ({ numberOfPages, onPageChange, currentPage }) => {
         </>
       }
 
-      containerClassName={"pagination flex justify-center p-3 gap-3 items-center" }
+      containerClassName={"pagination flex justify-center p-3 gap-3 items-center"}
       pageClassName={"page-item"}
-      pageLinkClassName={"page-link"}
+      pageLinkClassName={"page-link  text-white px-4 py-2 rounded-md shadow-md hover:shadow-lg"}
       previousClassName={"page-item-dir"}
       nextClassName={"page-item-dir"}
-      previousLinkClassName={"bg-red"}
-      nextLinkClassName={"page-link"}
+      previousLinkClassName={" text-white px-4 py-2 rounded-md shadow-md hover:shadow-lg"}
+      nextLinkClassName={"page-link  text-white px-4 py-2 rounded-md shadow-md hover:shadow-lg"}
       breakClassName={"page-item"}
       breakLinkClassName={"page-link"}
-      activeClassName={"bg-red"}
-      forcePage={currentPage - 1} // تعيين الصفحة النشطة
+      activeClassName={"bg-gradient-to-r from-red-400 to-red-600 text-white px-4 py-2 rounded-md shadow-md"}
+      forcePage={currentPage - 1}
     />
   );
 };
