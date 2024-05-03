@@ -34,10 +34,12 @@ const AdminOrder = () => {
                 <thead className="border-b bg-gray-50 rounded-t-lg text-left">
                   <tr>
                     <th scope="col" className="rounded-tl-lg text-sm font-medium px-6 py-4">NAME</th>
-                    <th scope="col" className="text-sm font-medium px-6 py-4">TITLE</th>
-                    <th scope="col" className="text-sm font-medium px-6 py-4">STATUS</th>
-                    <th scope="col" className="text-sm font-medium px-6 py-4">ROLE</th>
-                    <th scope="col" className="rounded-tr-lg text-sm font-medium px-6 py-4"></th>
+                    {/* <th scope="col" className="text-sm font-medium px-6 py-4">shippingAddress</th> */}
+                    <th scope="col" className="text-sm font-medium px-6 py-4">Product</th>
+                    <th scope="col" className="text-sm font-medium px-6 py-4">count</th>
+                    <th scope="col" className="text-sm font-medium px-6 py-4">price</th>
+                    <th scope="col" className="text-sm font-medium px-6 py-4">totalOrderPrice</th>
+                    <th scope="col" className="text-sm font-medium px-6 py-4">createdAt</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -53,21 +55,54 @@ const AdminOrder = () => {
                        </div>
                      </div>
                    </th>
-                   <td className="text-sm font-normal px-6 py-4 whitespace-nowrap text-left">
+
+
+                   {/* <td className="text-sm font-normal px-6 py-4 whitespace-nowrap text-left">
                      <div className="flex flex-col">
-                       <p className="mb-0.5">{order.shippingAddress.details}</p>
-                       <p className="mb-0.5 text-gray-500">{order.shippingAddress.phone}</p>
-                       <p className="mb-0.5 text-gray-500">{order.shippingAddress.city}</p>
-                       <p className="mb-0.5 text-gray-500">{order.shippingAddress.postalCode}</p>
+                        <p className="mb-0.5">{order.shippingAddress.details}</p> 
+                        <p className="mb-0.5 text-gray-500">{order.shippingAddress.phone}</p> 
+                        <p className="mb-0.5 text-gray-500">{order.shippingAddress.city}</p> 
+                        <p className="mb-0.5 text-gray-500">{order.shippingAddress.postalCode}</p> 
                      </div>
+                   </td> */}
+
+
+                   <td className="align-middle text-sm font-normal px-6 py-4 whitespace-nowrap text-left">
+                    {order.cartItems.map((one,index)=> (
+                <p key={index + 1} className="mb-0.5 text-gray-500">{one.product.title}</p>
+
+                    ))}
+                     {/* <span className="text-xs py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-medium bg-green-200 text-green-600 rounded-full">Active</span> */}
                    </td>
                    <td className="align-middle text-sm font-normal px-6 py-4 whitespace-nowrap text-left">
-                     <span className="text-xs py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-medium bg-green-200 text-green-600 rounded-full">Active</span>
+                    {order.cartItems.map((one,index)=> (
+                <p key={index + 1} className="mb-0.5 text-blue-800">{one.count}</p>
+
+                    ))}
+                     {/* <span className="text-xs py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-medium bg-green-200 text-green-600 rounded-full">Active</span> */}
                    </td>
-                   <td className="align-middle text-gray-500 text-sm font-normal px-6 py-4 whitespace-nowrap text-left">Admin</td>
-                   <td className="align-middle  text-sm font-normal px-6 py-4 whitespace-nowrap text-left">
-                     <a href="#!" className="font-medium text-blue-600 hover:text-blue-700 focus:text-blue-700 active:text-blue-800 transition duration-300 ease-in-out">Edit</a>
+                   <td className="align-middle text-sm font-normal px-6 py-4 whitespace-nowrap text-left">
+                    {order.cartItems.map((one,index)=> (
+                <p key={index + 1} className="mb-0.5 text-black font-bold">{one.price} EGY</p>
+
+                    ))}
+                     {/* <span className="text-xs py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-medium bg-green-200 text-green-600 rounded-full">Active</span> */}
                    </td>
+                   <td className="align-middle text-sm font-normal px-6 py-4 whitespace-nowrap text-left">
+                  
+                <p  className="mb-0.5 text-black font-bold">{order.totalOrderPrice} EGY</p>
+
+                  
+                     {/* <span className="text-xs py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-medium bg-green-200 text-green-600 rounded-full">Active</span> */}
+                   </td>
+                   <td className="align-middle text-sm font-normal px-6 py-4 whitespace-nowrap text-left">
+                  
+                  <p  className="mb-0.5 text-gray-500">{order.createdAt}</p>
+  
+                    
+                       {/* <span className="text-xs py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-medium bg-green-200 text-green-600 rounded-full">Active</span> */}
+                     </td>
+                  
                  </tr>
                  ))}   
                 </tbody>
