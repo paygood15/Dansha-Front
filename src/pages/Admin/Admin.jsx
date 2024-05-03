@@ -108,7 +108,7 @@ const userRole = localStorage.getItem("userRole")
          </thead>
          <tbody>
          {allProductsData?.map((product, index) => (
-              <tr  key={index+1} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <tr  key={index + 1} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                   <th
                     scope="row"
                     className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
@@ -206,7 +206,7 @@ const userRole = localStorage.getItem("userRole")
            onChange={(e) => SetCategory(e.target.value)}
             >
              <option value="">Select a category</option>
-                 {categoriesData?.map((cat) => (
+                 {categoriesData?.map((cat,index) => (
                    <option key={index + 1} value={cat._id}>{cat.name}</option>
                  ))}
                   </select>
